@@ -35,7 +35,7 @@
 @property (nonatomic, strong) id customerID;
 @property (nonatomic, strong) id customerName;
 @property (nonatomic, strong) id storeID;
-@property (nonatomic, readonly) id cartID;
+@property (nonatomic, strong) id cartID;
 @property (nonatomic) NSTimeInterval cacheInterval;
 
 + (Magento *)service;
