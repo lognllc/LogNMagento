@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CFC330B21623D133004116B6 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC3309F1623D133004116B6 /* AFHTTPClient.m */; };
+		CFC330B41623D133004116B6 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330A11623D133004116B6 /* AFHTTPRequestOperation.m */; };
+		CFC330B61623D133004116B6 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330A31623D133004116B6 /* AFImageRequestOperation.m */; };
+		CFC330B81623D133004116B6 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330A51623D133004116B6 /* AFJSONRequestOperation.m */; };
+		CFC330BA1623D133004116B6 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330A71623D133004116B6 /* AFNetworkActivityIndicatorManager.m */; };
+		CFC330BD1623D133004116B6 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330AA1623D133004116B6 /* AFPropertyListRequestOperation.m */; };
+		CFC330BF1623D133004116B6 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330AC1623D133004116B6 /* AFURLConnectionOperation.m */; };
+		CFC330C11623D133004116B6 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330AE1623D133004116B6 /* AFXMLRequestOperation.m */; };
+		CFC330C31623D133004116B6 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330B01623D133004116B6 /* UIImageView+AFNetworking.m */; };
+		CFC330EA1623D13A004116B6 /* Magento.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330C61623D13A004116B6 /* Magento.m */; };
+		CFC330EC1623D13A004116B6 /* MagentoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330C81623D13A004116B6 /* MagentoClient.m */; };
+		CFC330EE1623D13A004116B6 /* NSObject+Soap.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330CA1623D13A004116B6 /* NSObject+Soap.m */; };
+		CFC330F01623D13A004116B6 /* SoapRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330CC1623D13A004116B6 /* SoapRequestOperation.m */; };
+		CFC330F21623D13A004116B6 /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330CF1623D13A004116B6 /* CTidy.m */; };
+		CFC330F41623D13A004116B6 /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330D11623D13A004116B6 /* CXHTMLDocument.m */; };
+		CFC330F61623D13A004116B6 /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330D31623D13A004116B6 /* CXMLDocument.m */; };
+		CFC330F81623D13A004116B6 /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330D51623D13A004116B6 /* CXMLDocument_CreationExtensions.m */; };
+		CFC330FA1623D13A004116B6 /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330D71623D13A004116B6 /* CXMLDocument_PrivateExtensions.m */; };
+		CFC330FC1623D13A004116B6 /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330D91623D13A004116B6 /* CXMLElement.m */; };
+		CFC330FE1623D13A004116B6 /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330DB1623D13A004116B6 /* CXMLElement_CreationExtensions.m */; };
+		CFC331001623D13A004116B6 /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330DD1623D13A004116B6 /* CXMLElement_ElementTreeExtensions.m */; };
+		CFC331021623D13A004116B6 /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330DF1623D13A004116B6 /* CXMLNamespaceNode.m */; };
+		CFC331041623D13A004116B6 /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330E11623D13A004116B6 /* CXMLNode.m */; };
+		CFC331061623D13A004116B6 /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330E31623D13A004116B6 /* CXMLNode_CreationExtensions.m */; };
+		CFC331081623D13A004116B6 /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330E51623D13A004116B6 /* CXMLNode_PrivateExtensions.m */; };
+		CFC3310A1623D13A004116B6 /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC330E71623D13A004116B6 /* CXMLNode_XPathExtensions.m */; };
+		CFC331121623D284004116B6 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC331111623D284004116B6 /* libxml2.dylib */; };
+		F8129C001591061B009BFE23 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8129BFF1591061B009BFE23 /* Cocoa.framework */; };
+		F8129C6F15910B15009BFE23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8129C6E15910B15009BFE23 /* main.m */; };
+		F8129C7115910B3E009BFE23 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8129C7015910B3E009BFE23 /* MainMenu.xib */; };
+		F8129C7715910C40009BFE23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8129C7515910C40009BFE23 /* AppDelegate.m */; };
+		F8A847CF161F55A500940F39 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A847CE161F55A500940F39 /* CoreServices.framework */; };
+		F8A847D2161F55AC00940F39 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A847D1161F55AC00940F39 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CFC3309E1623D133004116B6 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		CFC3309F1623D133004116B6 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		CFC330A01623D133004116B6 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		CFC330A11623D133004116B6 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		CFC330A21623D133004116B6 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		CFC330A31623D133004116B6 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		CFC330A41623D133004116B6 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		CFC330A51623D133004116B6 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		CFC330A61623D133004116B6 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		CFC330A71623D133004116B6 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		CFC330A81623D133004116B6 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		CFC330A91623D133004116B6 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		CFC330AA1623D133004116B6 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		CFC330AB1623D133004116B6 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		CFC330AC1623D133004116B6 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		CFC330AD1623D133004116B6 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		CFC330AE1623D133004116B6 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		CFC330AF1623D133004116B6 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		CFC330B01623D133004116B6 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		CFC330C51623D13A004116B6 /* Magento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = Magento.h; sourceTree = "<group>"; };
+		CFC330C61623D13A004116B6 /* Magento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Magento.m; sourceTree = "<group>"; };
+		CFC330C71623D13A004116B6 /* MagentoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = MagentoClient.h; sourceTree = "<group>"; };
+		CFC330C81623D13A004116B6 /* MagentoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagentoClient.m; sourceTree = "<group>"; };
+		CFC330C91623D13A004116B6 /* NSObject+Soap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = "NSObject+Soap.h"; sourceTree = "<group>"; };
+		CFC330CA1623D13A004116B6 /* NSObject+Soap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Soap.m"; sourceTree = "<group>"; };
+		CFC330CB1623D13A004116B6 /* SoapRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = SoapRequestOperation.h; sourceTree = "<group>"; };
+		CFC330CC1623D13A004116B6 /* SoapRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapRequestOperation.m; sourceTree = "<group>"; };
+		CFC330CE1623D13A004116B6 /* CTidy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = CTidy.h; sourceTree = "<group>"; };
+		CFC330CF1623D13A004116B6 /* CTidy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTidy.m; sourceTree = "<group>"; };
+		CFC330D01623D13A004116B6 /* CXHTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = CXHTMLDocument.h; sourceTree = "<group>"; };
+		CFC330D11623D13A004116B6 /* CXHTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHTMLDocument.m; sourceTree = "<group>"; };
+		CFC330D21623D13A004116B6 /* CXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = CXMLDocument.h; sourceTree = "<group>"; };
+		CFC330D31623D13A004116B6 /* CXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument.m; sourceTree = "<group>"; };
+		CFC330D41623D13A004116B6 /* CXMLDocument_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = CXMLDocument_CreationExtensions.h; sourceTree = "<group>"; };
+		CFC330D51623D13A004116B6 /* CXMLDocument_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_CreationExtensions.m; sourceTree = "<group>"; };
+		CFC330D61623D13A004116B6 /* CXMLDocument_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = CXMLDocument_PrivateExtensions.h; sourceTree = "<group>"; };
+		CFC330D71623D13A004116B6 /* CXMLDocument_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_PrivateExtensions.m; sourceTree = "<group>"; };
+		CFC330D81623D13A004116B6 /* CXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = CXMLElement.h; sourceTree = "<group>"; };
+		CFC330D91623D13A004116B6 /* CXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement.m; sourceTree = "<group>"; };
+		CFC330DA1623D13A004116B6 /* CXMLElement_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = CXMLElement_CreationExtensions.h; sourceTree = "<group>"; };
+		CFC330DB1623D13A004116B6 /* CXMLElement_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_CreationExtensions.m; sourceTree = "<group>"; };
+		CFC330DC1623D13A004116B6 /* CXMLElement_ElementTreeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = CXMLElement_ElementTreeExtensions.h; sourceTree = "<group>"; };
+		CFC330DD1623D13A004116B6 /* CXMLElement_ElementTreeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_ElementTreeExtensions.m; sourceTree = "<group>"; };
+		CFC330DE1623D13A004116B6 /* CXMLNamespaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = CXMLNamespaceNode.h; sourceTree = "<group>"; };
+		CFC330DF1623D13A004116B6 /* CXMLNamespaceNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNamespaceNode.m; sourceTree = "<group>"; };
+		CFC330E01623D13A004116B6 /* CXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = CXMLNode.h; sourceTree = "<group>"; };
+		CFC330E11623D13A004116B6 /* CXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode.m; sourceTree = "<group>"; };
+		CFC330E21623D13A004116B6 /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
+		CFC330E31623D13A004116B6 /* CXMLNode_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_CreationExtensions.m; sourceTree = "<group>"; };
+		CFC330E41623D13A004116B6 /* CXMLNode_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = CXMLNode_PrivateExtensions.h; sourceTree = "<group>"; };
+		CFC330E51623D13A004116B6 /* CXMLNode_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_PrivateExtensions.m; sourceTree = "<group>"; };
+		CFC330E61623D13A004116B6 /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
+		CFC330E71623D13A004116B6 /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
+		CFC330E81623D13A004116B6 /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = TouchXML.h; sourceTree = "<group>"; };
+		CFC331111623D284004116B6 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		F8129BFB1591061B009BFE23 /* Magento Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magento Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8129BFF1591061B009BFE23 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F8129C021591061B009BFE23 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F8129C031591061B009BFE23 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F8129C041591061B009BFE23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F8129C6E15910B15009BFE23 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		F8129C7015910B3E009BFE23 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		F8129C7515910C40009BFE23 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		F8129C7615910C40009BFE23 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		F877018B159A1CE700B45C0D /* Magento Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Magento Example.entitlements"; sourceTree = "<group>"; };
+		F8A847CE161F55A500940F39 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		F8A847D1161F55AC00940F39 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8129BF81591061B009BFE23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFC331121623D284004116B6 /* libxml2.dylib in Frameworks */,
+				F8A847D2161F55AC00940F39 /* SystemConfiguration.framework in Frameworks */,
+				F8A847CF161F55A500940F39 /* CoreServices.framework in Frameworks */,
+				F8129C001591061B009BFE23 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CFC3309D1623D133004116B6 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				CFC3309E1623D133004116B6 /* AFHTTPClient.h */,
+				CFC3309F1623D133004116B6 /* AFHTTPClient.m */,
+				CFC330A01623D133004116B6 /* AFHTTPRequestOperation.h */,
+				CFC330A11623D133004116B6 /* AFHTTPRequestOperation.m */,
+				CFC330A21623D133004116B6 /* AFImageRequestOperation.h */,
+				CFC330A31623D133004116B6 /* AFImageRequestOperation.m */,
+				CFC330A41623D133004116B6 /* AFJSONRequestOperation.h */,
+				CFC330A51623D133004116B6 /* AFJSONRequestOperation.m */,
+				CFC330A61623D133004116B6 /* AFNetworkActivityIndicatorManager.h */,
+				CFC330A71623D133004116B6 /* AFNetworkActivityIndicatorManager.m */,
+				CFC330A81623D133004116B6 /* AFNetworking.h */,
+				CFC330A91623D133004116B6 /* AFPropertyListRequestOperation.h */,
+				CFC330AA1623D133004116B6 /* AFPropertyListRequestOperation.m */,
+				CFC330AB1623D133004116B6 /* AFURLConnectionOperation.h */,
+				CFC330AC1623D133004116B6 /* AFURLConnectionOperation.m */,
+				CFC330AD1623D133004116B6 /* AFXMLRequestOperation.h */,
+				CFC330AE1623D133004116B6 /* AFXMLRequestOperation.m */,
+				CFC330AF1623D133004116B6 /* UIImageView+AFNetworking.h */,
+				CFC330B01623D133004116B6 /* UIImageView+AFNetworking.m */,
+			);
+			name = AFNetworking;
+			path = ../AFNetworking/AFNetworking;
+			sourceTree = "<group>";
+		};
+		CFC330C41623D13A004116B6 /* Magento */ = {
+			isa = PBXGroup;
+			children = (
+				CFC330C51623D13A004116B6 /* Magento.h */,
+				CFC330C61623D13A004116B6 /* Magento.m */,
+				CFC330C71623D13A004116B6 /* MagentoClient.h */,
+				CFC330C81623D13A004116B6 /* MagentoClient.m */,
+				CFC330C91623D13A004116B6 /* NSObject+Soap.h */,
+				CFC330CA1623D13A004116B6 /* NSObject+Soap.m */,
+				CFC330CB1623D13A004116B6 /* SoapRequestOperation.h */,
+				CFC330CC1623D13A004116B6 /* SoapRequestOperation.m */,
+				CFC330CD1623D13A004116B6 /* TouchXML */,
+			);
+			name = Magento;
+			path = ../Magento;
+			sourceTree = "<group>";
+		};
+		CFC330CD1623D13A004116B6 /* TouchXML */ = {
+			isa = PBXGroup;
+			children = (
+				CFC330CE1623D13A004116B6 /* CTidy.h */,
+				CFC330CF1623D13A004116B6 /* CTidy.m */,
+				CFC330D01623D13A004116B6 /* CXHTMLDocument.h */,
+				CFC330D11623D13A004116B6 /* CXHTMLDocument.m */,
+				CFC330D21623D13A004116B6 /* CXMLDocument.h */,
+				CFC330D31623D13A004116B6 /* CXMLDocument.m */,
+				CFC330D41623D13A004116B6 /* CXMLDocument_CreationExtensions.h */,
+				CFC330D51623D13A004116B6 /* CXMLDocument_CreationExtensions.m */,
+				CFC330D61623D13A004116B6 /* CXMLDocument_PrivateExtensions.h */,
+				CFC330D71623D13A004116B6 /* CXMLDocument_PrivateExtensions.m */,
+				CFC330D81623D13A004116B6 /* CXMLElement.h */,
+				CFC330D91623D13A004116B6 /* CXMLElement.m */,
+				CFC330DA1623D13A004116B6 /* CXMLElement_CreationExtensions.h */,
+				CFC330DB1623D13A004116B6 /* CXMLElement_CreationExtensions.m */,
+				CFC330DC1623D13A004116B6 /* CXMLElement_ElementTreeExtensions.h */,
+				CFC330DD1623D13A004116B6 /* CXMLElement_ElementTreeExtensions.m */,
+				CFC330DE1623D13A004116B6 /* CXMLNamespaceNode.h */,
+				CFC330DF1623D13A004116B6 /* CXMLNamespaceNode.m */,
+				CFC330E01623D13A004116B6 /* CXMLNode.h */,
+				CFC330E11623D13A004116B6 /* CXMLNode.m */,
+				CFC330E21623D13A004116B6 /* CXMLNode_CreationExtensions.h */,
+				CFC330E31623D13A004116B6 /* CXMLNode_CreationExtensions.m */,
+				CFC330E41623D13A004116B6 /* CXMLNode_PrivateExtensions.h */,
+				CFC330E51623D13A004116B6 /* CXMLNode_PrivateExtensions.m */,
+				CFC330E61623D13A004116B6 /* CXMLNode_XPathExtensions.h */,
+				CFC330E71623D13A004116B6 /* CXMLNode_XPathExtensions.m */,
+				CFC330E81623D13A004116B6 /* TouchXML.h */,
+			);
+			path = TouchXML;
+			sourceTree = "<group>";
+		};
+		F8129BF01591061B009BFE23 = {
+			isa = PBXGroup;
+			children = (
+				F877018B159A1CE700B45C0D /* Magento Example.entitlements */,
+				F8129C051591061B009BFE23 /* Classes */,
+				F8129C4C15910901009BFE23 /* Vendor */,
+				F8129BFE1591061B009BFE23 /* Frameworks */,
+				F8129BFC1591061B009BFE23 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8129BFC1591061B009BFE23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8129BFB1591061B009BFE23 /* Magento Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8129BFE1591061B009BFE23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFC331111623D284004116B6 /* libxml2.dylib */,
+				F8A847D1161F55AC00940F39 /* SystemConfiguration.framework */,
+				F8A847CE161F55A500940F39 /* CoreServices.framework */,
+				F8129BFF1591061B009BFE23 /* Cocoa.framework */,
+				F8129C011591061B009BFE23 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8129C011591061B009BFE23 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8129C021591061B009BFE23 /* AppKit.framework */,
+				F8129C031591061B009BFE23 /* CoreData.framework */,
+				F8129C041591061B009BFE23 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F8129C051591061B009BFE23 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F8129C7615910C40009BFE23 /* AppDelegate.h */,
+				F8129C7515910C40009BFE23 /* AppDelegate.m */,
+				F8129C291591073C009BFE23 /* Models */,
+				F8129C061591061B009BFE23 /* Supporting Files */,
+			);
+			name = Classes;
+			path = "AFNetworking-Mac-Example";
+			sourceTree = "<group>";
+		};
+		F8129C061591061B009BFE23 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8129C6E15910B15009BFE23 /* main.m */,
+				F8129C7015910B3E009BFE23 /* MainMenu.xib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8129C291591073C009BFE23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			path = Classes/Models;
+			sourceTree = SOURCE_ROOT;
+		};
+		F8129C4C15910901009BFE23 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				CFC330C41623D13A004116B6 /* Magento */,
+				CFC3309D1623D133004116B6 /* AFNetworking */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8129BFA1591061B009BFE23 /* Magento Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8129C191591061B009BFE23 /* Build configuration list for PBXNativeTarget "Magento Example" */;
+			buildPhases = (
+				F8129BF71591061B009BFE23 /* Sources */,
+				F8129BF81591061B009BFE23 /* Frameworks */,
+				F8129BF91591061B009BFE23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Magento Example";
+			productName = "AFNetworking-Mac-Example";
+			productReference = F8129BFB1591061B009BFE23 /* Magento Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8129BF21591061B009BFE23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = F8129BF51591061B009BFE23 /* Build configuration list for PBXProject "Magento Mac Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F8129BF01591061B009BFE23;
+			productRefGroup = F8129BFC1591061B009BFE23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8129BFA1591061B009BFE23 /* Magento Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8129BF91591061B009BFE23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8129C7115910B3E009BFE23 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8129BF71591061B009BFE23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8129C6F15910B15009BFE23 /* main.m in Sources */,
+				F8129C7715910C40009BFE23 /* AppDelegate.m in Sources */,
+				CFC330B21623D133004116B6 /* AFHTTPClient.m in Sources */,
+				CFC330B41623D133004116B6 /* AFHTTPRequestOperation.m in Sources */,
+				CFC330B61623D133004116B6 /* AFImageRequestOperation.m in Sources */,
+				CFC330B81623D133004116B6 /* AFJSONRequestOperation.m in Sources */,
+				CFC330BA1623D133004116B6 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				CFC330BD1623D133004116B6 /* AFPropertyListRequestOperation.m in Sources */,
+				CFC330BF1623D133004116B6 /* AFURLConnectionOperation.m in Sources */,
+				CFC330C11623D133004116B6 /* AFXMLRequestOperation.m in Sources */,
+				CFC330C31623D133004116B6 /* UIImageView+AFNetworking.m in Sources */,
+				CFC330EA1623D13A004116B6 /* Magento.m in Sources */,
+				CFC330EC1623D13A004116B6 /* MagentoClient.m in Sources */,
+				CFC330EE1623D13A004116B6 /* NSObject+Soap.m in Sources */,
+				CFC330F01623D13A004116B6 /* SoapRequestOperation.m in Sources */,
+				CFC330F21623D13A004116B6 /* CTidy.m in Sources */,
+				CFC330F41623D13A004116B6 /* CXHTMLDocument.m in Sources */,
+				CFC330F61623D13A004116B6 /* CXMLDocument.m in Sources */,
+				CFC330F81623D13A004116B6 /* CXMLDocument_CreationExtensions.m in Sources */,
+				CFC330FA1623D13A004116B6 /* CXMLDocument_PrivateExtensions.m in Sources */,
+				CFC330FC1623D13A004116B6 /* CXMLElement.m in Sources */,
+				CFC330FE1623D13A004116B6 /* CXMLElement_CreationExtensions.m in Sources */,
+				CFC331001623D13A004116B6 /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				CFC331021623D13A004116B6 /* CXMLNamespaceNode.m in Sources */,
+				CFC331041623D13A004116B6 /* CXMLNode.m in Sources */,
+				CFC331061623D13A004116B6 /* CXMLNode_CreationExtensions.m in Sources */,
+				CFC331081623D13A004116B6 /* CXMLNode_PrivateExtensions.m in Sources */,
+				CFC3310A1623D13A004116B6 /* CXMLNode_XPathExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F8129C171591061B009BFE23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F8129C181591061B009BFE23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F8129C1A1591061B009BFE23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Magento Example.entitlements";
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "Mac-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F8129C1B1591061B009BFE23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Magento Example.entitlements";
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "Mac-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8129BF51591061B009BFE23 /* Build configuration list for PBXProject "Magento Mac Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8129C171591061B009BFE23 /* Debug */,
+				F8129C181591061B009BFE23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8129C191591061B009BFE23 /* Build configuration list for PBXNativeTarget "Magento Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8129C1A1591061B009BFE23 /* Debug */,
+				F8129C1B1591061B009BFE23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8129BF21591061B009BFE23 /* Project object */;
+}
