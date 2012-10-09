@@ -1,6 +1,5 @@
 //
 //  SoapRequestOperation.m
-//  Hauler Deals
 //
 //  Created by Rex Sheng on 9/16/12.
 //  Copyright (c) 2012 Log(n) LLC. All rights reserved.
@@ -37,8 +36,6 @@
 @end
 
 @implementation SoapRequestOperation
-
-@synthesize deserializeTo;
 
 - (void)setCompletionBlockWithSuccess:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
 							  failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
