@@ -9,15 +9,15 @@
 #import "NSObject+Soap.h"
 
 #ifndef MAGENTO_BASE_URL
-#warning "You need define your MAGENTO_BASE_URL in your .pch"
+#warning "You need define your MAGENTO_BASE_URL in your Prefix.pch"
 #define MAGENTO_BASE_URL @""
 #endif
 #ifndef MAGENTO_USERNAME
-#warning "You need define your MAGENTO_USERNAME in your .pch"
+#warning "You need define your MAGENTO_USERNAME in your Prefix.pch"
 #define MAGENTO_USERNAME @""
 #endif
 #ifndef MAGENTO_API_KEY
-#warning "You need define your MAGENTO_API_KEY in your .pch"
+#warning "You need define your MAGENTO_API_KEY in your Prefix.pch"
 #define MAGENTO_API_KEY @""
 #endif
 
