@@ -202,21 +202,18 @@ NSString * const KEY_SEPERATOR = @"::";
 	}
 }
 
-+ (void)getImage:(NSMutableDictionary *)item completion:(void (^)(NSString *imageURL, BOOL immediate))completion
++ (void)getImages:(NSString *)productId completion:(void (^)(NSArray *imageURLs))completion
 {
-	NSString *url = item[@"image"];
-	if (!url) {
-		item[@"image"] = @"";
-		[self call:@[@"catalog_product_attribute_media.list", item[@"product_id"]] success:^(AFHTTPRequestOperation *operation, id responseObject) {
-			NSDictionary *image = [responseObject filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"exclude == '0'"]].lastObject;
-			if (image) {
-				item[@"image"] = image[@"url"];
-				if (completion) completion(image[@"url"], NO);
+	[self call:@[@"catalog_product_attribute_media.list", productId] success:^(AFHTTPRequestOperation *operation, NSArray *products) {
+		NSMutableArray *urls = [NSMutableArray arrayWithCapacity:products.count];
+		[products enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+			if ([obj[@"exclude"] isEqualToString:@"0"]) {
+				NSString *url = [obj[@"url"] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+				if (![urls containsObject:url]) [urls addObject:url];
 			}
-		} failure:nil];
-	} else if (url.length) {
-		if (completion) completion(url, YES);
-	}
+		}];
+		if (completion) completion(urls);
+	} failure:nil];
 }
 
 #pragma mark - Session

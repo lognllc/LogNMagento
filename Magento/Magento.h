@@ -49,7 +49,7 @@
 
 + (void)call:(NSArray *)args success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 + (void)multiCall:(NSArray *)args success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
-+ (void)getImage:(NSMutableDictionary *)item completion:(void (^)(NSString *imageURL, BOOL immediate))completion;
 + (void)getImageAndPrice:(NSMutableDictionary *)item completion:(void (^)(BOOL immediate))completion;
++ (void)getImages:(NSString *)productId completion:(void (^)(NSArray *imageURLs))completion;
 
 @end
