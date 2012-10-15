@@ -14,14 +14,14 @@ NSString * const kUserDefaultsStoresKey = @"magento.stores";
 NSString * const kUserDefaultsCustomerKey = @"magento.customer_id";
 NSString * const kUserDefaultsCustomerNameKey = @"magento.customer_name";
 NSString * const FAILED_SESSION = @"NULL";
-NSString * const KEY_SEPERATOR = @"::";
 
 @implementation Magento
 {
 	dispatch_group_t session_group;
 	NSArray *countries;
 	dispatch_queue_t session_queue;
-	NSMutableDictionary *_cache;
+	NSCache *_cache;
+	NSString *sessionID;
 }
 
 @synthesize customerID, cartID, storeID, cacheInterval, customerName;
@@ -79,16 +79,17 @@ NSString * const KEY_SEPERATOR = @"::";
 - (void)cacheResponse:(id)value forCall:(NSArray *)key
 {
     if (!_cache) {
-        _cache = [[NSMutableDictionary alloc] init];
+        _cache = [[NSCache alloc] init];
     }
-    [_cache setValue:value forKey:[key componentsJoinedByString:KEY_SEPERATOR]];
-    [NSObject cancelPreviousPerformRequestsWithTarget:_cache selector:@selector(removeObjectForKey:) object:key];
-    [_cache performSelector:@selector(removeObjectForKey:) withObject:key afterDelay:cacheInterval];
+	NSString *_key = [key description];
+    [_cache setObject:value forKey:_key];
+    [NSObject cancelPreviousPerformRequestsWithTarget:_cache selector:@selector(removeObjectForKey:) object:_key];
+    [_cache performSelector:@selector(removeObjectForKey:) withObject:_key afterDelay:cacheInterval];
 }
 
 - (id)cachedResponseForCall:(NSArray *)call
 {
-	return [_cache objectForKey:[call componentsJoinedByString:KEY_SEPERATOR]];
+	return [_cache objectForKey:[call description]];
 }
 
 #pragma mark - Cart And Customer
@@ -234,20 +235,25 @@ NSString * const KEY_SEPERATOR = @"::";
 	}];
 }
 
-- (void)inSession:(dispatch_block_t)block
+- (void)inSession:(void (^)(NSString *session))block
 {
 	dispatch_async(session_queue, ^{
-		if (!sessionID || sessionID == FAILED_SESSION) {
-			if (sessionID == FAILED_SESSION) {
-				dispatch_async(dispatch_get_main_queue(), ^{
-					[self startSession];
-				});
+		NSString *_sessionID;
+		@synchronized(self) {
+			_sessionID = sessionID;
+		}
+		if (!_sessionID || _sessionID == FAILED_SESSION) {
+			if (_sessionID == FAILED_SESSION) {
+				[self startSession];
 			}
 			if (![NSThread isMainThread]) {
 				dispatch_group_wait(session_group, DISPATCH_TIME_FOREVER);
 			}
 		}
-		if (block) block();
+		@synchronized(self) {
+			_sessionID = sessionID;
+		}
+		if (block) block(_sessionID);
 	});
 }
 
@@ -270,10 +276,10 @@ NSString * const KEY_SEPERATOR = @"::";
 - (void)call:(NSArray *)params success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
 	NSAssert(params.count > 0, @"call method does not provided");
-	[self inSession:^{
+	[self inSession:^(NSString *session) {
 		NSString *resourcePath = [params objectAtIndex:0];
 		NSArray *args = [params subarrayWithRange:NSMakeRange(1, params.count - 1)];
-		[client postPath:@"call" parameters:@{@"sessionId": sessionID, @"resourcePath": resourcePath, @"args": args} success:success failure:failure];
+		[client postPath:@"call" parameters:@{@"sessionId": session, @"resourcePath": resourcePath, @"args": args} success:success failure:failure];
 	}];
 }
 
@@ -284,8 +290,8 @@ NSString * const KEY_SEPERATOR = @"::";
 
 - (void)multiCall:(NSArray *)args success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
-	[self inSession:^{
-		[client postPath:@"multiCall" parameters:@{@"sessionId": sessionID, @"calls": args} success:success failure:failure];
+	[self inSession:^(NSString *session) {
+		[client postPath:@"multiCall" parameters:@{@"sessionId": session, @"calls": args} success:success failure:failure];
 	}];
 }
 

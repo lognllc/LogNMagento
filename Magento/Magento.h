@@ -28,8 +28,6 @@
 {
 	@protected
 	MagentoClient *client;
-	@protected
-	NSString *sessionID;
 }
 @property (nonatomic, strong) id customerID;
 @property (nonatomic, strong) id customerName;
@@ -44,9 +42,8 @@
 - (void)cacheResponse:(id)value forCall:(NSArray *)call;
 - (void)clearCache;
 
-- (void)inSession:(dispatch_block_t)block;
+- (void)inSession:(void (^)(NSString *session))block;
 - (void)renewSession;
-
 + (void)call:(NSArray *)args success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 + (void)multiCall:(NSArray *)args success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 + (void)getImageAndPrice:(NSMutableDictionary *)item completion:(void (^)(BOOL immediate))completion;
