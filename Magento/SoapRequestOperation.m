@@ -72,8 +72,8 @@
 				if (failure) {
 					int code = [[root childAtIndex:0].stringValue intValue];
 					NSString *message = [root childAtIndex:1].stringValue;
-					error = [[NSError alloc] initWithDomain:@"Magento" code:code userInfo:@{ NSLocalizedDescriptionKey : NSLocalizedString(message, nil) }];
 					dispatch_async(self.failureCallbackQueue ?: dispatch_get_main_queue(), ^{
+						NSError *error = [[NSError alloc] initWithDomain:@"Magento" code:code userInfo:@{ NSLocalizedDescriptionKey : NSLocalizedString(message, nil) }];
 						failure(self, error);
 					});
 				}
