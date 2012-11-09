@@ -277,7 +277,7 @@ NSString * const FAILED_SESSION = @"NULL";
 {
 	NSAssert(params.count > 0, @"call method does not provided");
 	[self inSession:^(NSString *session) {
-		NSString *resourcePath = [params objectAtIndex:0];
+		NSString *resourcePath = params[0];
 		NSArray *args = [params subarrayWithRange:NSMakeRange(1, params.count - 1)];
 		[client postPath:@"call" parameters:@{@"sessionId": session, @"resourcePath": resourcePath, @"args": args} success:success failure:failure];
 	}];

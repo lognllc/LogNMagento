@@ -89,9 +89,9 @@
 			} else if ([type isEqualToString:@"xsd:string"]) {
 				output = root.stringValue;
 			} else if ([type isEqualToString:@"xsd:int"]) {
-				output = [NSNumber numberWithInt:[root.stringValue intValue]];
+				output = @([root.stringValue intValue]);
 			} else if ([type isEqualToString:@"xsd:boolean"]) {
-				output = [NSNumber numberWithBool:[root.stringValue boolValue]];
+				output = @([root.stringValue boolValue]);
 			}
 			if (success) {
 				dispatch_async(self.successCallbackQueue ?: dispatch_get_main_queue(), ^{

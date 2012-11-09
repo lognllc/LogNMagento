@@ -53,13 +53,13 @@ theXPathContext->node = _node;
 
 for (NSString *thePrefix in inNamespaceMappings)
 	{
-	xmlXPathRegisterNs(theXPathContext, (xmlChar *)[thePrefix UTF8String], (xmlChar *)[[inNamespaceMappings objectForKey:thePrefix] UTF8String]);
+	xmlXPathRegisterNs(theXPathContext, (xmlChar *)[thePrefix UTF8String], (xmlChar *)[inNamespaceMappings[thePrefix] UTF8String]);
 	}
 
 // TODO considering putting xmlChar <-> UTF8 into a NSString category
 xmlXPathObjectPtr theXPathObject = xmlXPathEvalExpression((const xmlChar *)[xpath UTF8String], theXPathContext);
 if (xmlXPathNodeSetIsEmpty(theXPathObject->nodesetval))
-	theResult = [NSArray array]; // TODO better to return NULL?
+	theResult = @[]; // TODO better to return NULL?
 else
 	{
 	NSMutableArray *theArray = [NSMutableArray array];
