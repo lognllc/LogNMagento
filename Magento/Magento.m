@@ -210,7 +210,7 @@ NSString * const FAILED_SESSION = @"NULL";
 		[products enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
 			if ([obj[@"exclude"] isEqualToString:@"0"]) {
 				NSString *url = [obj[@"url"] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
-				if (![urls containsObject:url]) [urls addObject:url];
+				if ([url hasPrefix:@"http"] && ![urls containsObject:url]) [urls addObject:url];
 			}
 		}];
 		if (completion) completion(urls);
