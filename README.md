@@ -64,4 +64,4 @@ An sample of create customer would be:
 	
 License
 =======
-LogN Magento is available under the MIT license.
+LogN Magento is available under the Apache License (v2).
