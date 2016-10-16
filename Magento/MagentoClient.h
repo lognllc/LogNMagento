@@ -5,8 +5,16 @@
 //  Copyright (c) 2012 Log(n) LLC. All rights reserved.
 //
 
-#import "AFHTTPClient.h"
+#import "AFHTTPSessionManager.h"
 
-@interface MagentoClient : AFHTTPClient
+typedef void (^MagentoRequestSuccess) (id responseObject);
+typedef void (^MagentoRequestError) (NSError *error);
+
+@interface MagentoClient : AFHTTPSessionManager
+
+- (void)postPath:(NSString *)path
+      parameters:(NSDictionary *)parameters
+         success:(MagentoRequestSuccess)success
+         failure:(MagentoRequestError)failure;
 
 @end

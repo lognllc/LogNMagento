@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NSObject+Soap.h"
+#import "MagentoClient.h"
 
 #ifndef MAGENTO_BASE_URL
 #warning "You need define your MAGENTO_BASE_URL in your Prefix.pch"
@@ -21,13 +22,12 @@
 #define MAGENTO_API_KEY @""
 #endif
 
-@class MagentoClient;
 @class AFHTTPRequestOperation;
 
 @interface Magento : NSObject
 {
-	@protected
-	MagentoClient *client;
+@protected
+    MagentoClient *client;
 }
 @property (nonatomic, strong) id customerID;
 @property (nonatomic, strong) id customerName;
@@ -44,9 +44,24 @@
 
 - (void)inSession:(void (^)(NSString *session))block;
 - (void)renewSession;
-+ (void)call:(NSArray *)args success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
-+ (void)multiCall:(NSArray *)args success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
-+ (void)getImageAndPrice:(NSMutableDictionary *)item completion:(void (^)(BOOL immediate))completion;
-+ (void)getImages:(NSString *)productId completion:(void (^)(NSArray *imageURLs))completion;
+
+
++ (void)call:(NSArray *)args
+     success:(MagentoRequestSuccess)success
+     failure:(MagentoRequestError)failure;
+
+
+
++ (void)multiCall:(NSArray *)args
+          success:(MagentoRequestSuccess)success
+          failure:(MagentoRequestError)failure;
+
+
+
++ (void)getImageAndPrice:(NSMutableDictionary *)item
+              completion:(void (^)(BOOL immediate))completion;
+
++ (void)getImages:(NSString *)productId
+       completion:(void (^)(NSArray *imageURLs))completion;
 
 @end
