@@ -6,8 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFHTTPRequestOperation.h"
 
-@interface SoapRequestOperation : AFHTTPRequestOperation
+@interface SoapRequestOperation : NSObject
 
 @end
